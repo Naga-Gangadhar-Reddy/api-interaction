@@ -6,4 +6,4 @@ tower:
     copy_template_name: Exact copy of DEV ftpservers setup
     tower_fqdn: tower.lab.example.com
     tower_user: admin
-    tower_password: redhat
+    tower_password: redhat123

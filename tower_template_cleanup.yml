@@ -4,5 +4,15 @@
   gather_facts: false
 
   tasks:
+    - name: Delete an existing Ansible Tower Job template using the uri module
+      uri:
+        url: "https://{{ tower_fqdn }}/api/v2/job_templates/{{ copy_template_name | urlencode }}/"
+        validate_certs: no
+        method: DELETE
+        return_content: yes
+        force_basic_auth: yes
+        user: "{{ tower_user }}"
+        password: "{{ tower_password }}"
+        status_code: 204
 
 ...
